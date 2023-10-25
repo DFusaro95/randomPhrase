@@ -29,6 +29,7 @@ ul {
   background-size: cover;
   margin: 0 auto;
   position: relative;
+  overflow: hidden;
 }
 
 .container {
