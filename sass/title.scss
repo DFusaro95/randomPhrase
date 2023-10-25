@@ -1,0 +1,6 @@
+@use "mixins";
+
+.main__title {
+  @include mixins.text(3, "Playpen Sans", 700, 2, center);
+  @include mixins.absolute(0.5, 0, 0, 0);
+}

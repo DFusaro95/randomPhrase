@@ -1,0 +1,39 @@
+
+@mixin mp_formater{ 
+  margin: 0;
+  padding: 0;
+}
+
+@mixin flex($direction, $align, $justify){
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin viewport($height, $width){
+  width: $width * 1vw;
+  height: $height * 1vh;
+}
+
+@mixin text($size, $font, $weight, $height, $align){
+  font-size: $size * 1rem;
+  font-family: $font;
+  font-weight: $weight;
+  line-height: $height * 1em;
+  text-align: $align;
+}
+
+@mixin img{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin absolute($top, $bottom, $right, $left){
+  position: absolute;
+  top: $top * 1em;
+  bottom: $bottom * 1em;
+  right: $right * 1em;
+  left: $left * 1em;
+}

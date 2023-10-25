@@ -1,0 +1,15 @@
+@use 'formater';
+@use 'mixins';
+
+
+.main {
+  @include mixins.flex(column, center, center);
+  @include mixins.viewport(100, 100);
+  @include mixins.img;
+  margin: 0 auto;
+  position: relative;
+}
+
+.container {
+  max-width: 1024px;
+}

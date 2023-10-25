@@ -1,0 +1,15 @@
+@use 'mixins';
+
+.container {
+  @include mixins.flex(column, flex-end, center);
+  margin: 50px 10px 0px 10px;
+  gap: 2em;
+}
+
+.phrase {
+  @include mixins.text(1.8, "Neuton", 400, 1, center);
+}
+
+.author {
+  @include mixins.text(2, "Neuton", 700, 1, end);
+}

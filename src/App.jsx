@@ -1,24 +1,40 @@
-import { motion } from "framer-motion";
+
 import Phrase from "./components/Phrase";
 import Button from "./components/Button";
 import { useState } from "react";
 import  phrase  from "./utils/index.json";
 import randomElement from "./utils/getRandom";
+import Title from "./components/Title";
+import bgImg from "./utils/background";
+
 
 function App() {
   
-  const initialValue = randomElement(phrase)
-  
-  const [randomPhrase, setRandomPhrase] = useState(initialValue)
+  const initialPhrase = randomElement(phrase);  
+  const [randomPhrase, setRandomPhrase] = useState(initialPhrase);
 
-  console.log(randomPhrase)
+  const initialBg = randomElement(bgImg)
+  const [bgPath, setBgPath] = useState(initialBg);
+  
+  const objStyle = {
+    backgroundImage: `url(/images/fondo${bgPath}.jpg)`
+  }
 
   return (
-    <motion.main>
-      <h1>Galleta de la fortuna</h1>
-      <Button />
-      <Phrase />
-    </motion.main>
+    <main
+      style={objStyle} 
+      className="main"
+    >
+      <section className="container">
+      <Title />
+      <Button 
+      setBgPath={setBgPath}
+      setRandomPhrase={setRandomPhrase} 
+      />
+      <Phrase 
+      randomPhrase={randomPhrase}/>
+      </section>
+    </main>
   )
 }
 

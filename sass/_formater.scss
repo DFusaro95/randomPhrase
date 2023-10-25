@@ -1,0 +1,18 @@
+@use 'mixins';
+
+*,
+::after,
+::before {
+  @include mixins.mp_formater;
+}
+
+button {
+  border: none;
+  background-color: rgba(0,0,0,0.4);
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  @include mixins.mp_formater;
+}
